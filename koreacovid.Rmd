@@ -34,15 +34,23 @@ As we look at the data, the appropriate variables to use would be either sex tha
 
 ## Graphical results - use ggplot commands to do this  
 
+```{r}
+dd2 <- kRdata %>% group_by(result,Sex) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
 
 
-  
+# the group_by followed by summarize(count=n())
 
+basicC <- ggplot(dd2,aes(x=result,y=count,fill=Sex))
+basicC + geom_bar(stat="identity",position="dodge")
 
+#Now for percentage plot
 
+basicCC <- ggplot(dd2,aes(x=result,y=prcnt*100,fill=Sex)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
 
+As we look at the data, we see that there are more women than men in the alive graph. The dead pile show more man that were dead than female. The alive pile represents approximately 55% people that were female and approximately that were male. When looking at the dead graph, it shows  approximately 37% that were female while approximately 63% that were male .Even though there were more females that caught Covid the ones dying were the female 2-1.
 
-  
 ## Numerical results
 
 
