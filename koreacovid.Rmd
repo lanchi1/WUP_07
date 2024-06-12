@@ -53,6 +53,13 @@ As we look at the data, we see that there are more women than men in the alive g
 
 ## Numerical results
 
+```{r}
+table1 <- xtabs(~result + Sex, data=kRdata)
+rowPerc(table1)
+colPerc(table1)
+```
+
+When looking at these results, we see that of the dead people, about more than twice are male. At 1.4% of females were dead whereas 3% of males were dead. This showing that it was killing males at double the rate than females. 
 
 ## Inferential results 
 
