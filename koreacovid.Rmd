@@ -63,8 +63,13 @@ When looking at these results, we see that of the dead people, about more than t
 
 ## Inferential results 
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
-
+The females were from a population of a total of 1831 shows that 25 dies whereas in the males population of 1455, 44 died. There wasn't a difference between the sexes of who was getting killed. In the fishers exact tests, the odds of dying if you are a man is 2,3 times more than if you were a woman. 
 
 ## Conclusions
 
